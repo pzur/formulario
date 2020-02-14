@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="/static/css/formulario.css">
+    <link rel="stylesheet" href="/static/css/reset.css">
+</head>
+<body>
+    <div class="body_form">
+        <form action="" class="formulario" method="POST">{% csrf_token %}
+            <div class="titulo">
+                    <h1>Tus Datos</h1>
+                </div>
+        <div class="datos">
+            <div class="row">
+                {{ form.nombre }}
+                {{ form.apellido }}
+            </div>
+            <div class="row">
+                {{ form.direccion }}
+                {{ form.distrito }}
+            </div>
+            <div class="row">
+                {{ form.telefono }}
+                {{ form.dni }}
+            </div>
+            <div class="row_foto">
+                <p>¿ Podemos verte ?</p>
+                {{ form.foto }}
+            </div>
+            <div class="row">
+                <button>Enviar</button>
+                <button type="reset">Limpiar</button>
+            </div>
+        </div>
+        </form>
+    </div>
+</body>
+</html>
