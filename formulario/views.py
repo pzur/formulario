@@ -11,6 +11,7 @@ def Register_Cliente(request):
         form=ClienteForm(request.POST,request.FILES)
         if form.is_valid():
             form.save()
+            form.cleaned_data
         return redirect('register_cliente')
     else:
         form=ClienteForm()

@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="body_form">
-        <form action="" class="formulario" method="POST" enctype ="multipart/form-data">{% csrf_token %}
+        <form action="{% url 'register_cliente'  %}" class="formulario" method="POST" enctype ="multipart/form-data">{% csrf_token %}
         <div class="titulo">
             <h1>Tus Datos</h1>
         </div>
