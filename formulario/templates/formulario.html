@@ -9,10 +9,10 @@
 </head>
 <body>
     <div class="body_form">
-        <form action="" class="formulario" method="POST">{% csrf_token %}
-            <div class="titulo">
-                    <h1>Tus Datos</h1>
-                </div>
+        <form action="" class="formulario" method="POST" enctype ="multipart/form-data">{% csrf_token %}
+        <div class="titulo">
+            <h1>Tus Datos</h1>
+        </div>
         <div class="datos">
             <div class="row">
                 {{ form.nombre }}
@@ -31,7 +31,7 @@
                 {{ form.foto }}
             </div>
             <div class="row">
-                <button>Enviar</button>
+                <button type="submit" >Enviar</button>
                 <button type="reset">Limpiar</button>
             </div>
         </div>

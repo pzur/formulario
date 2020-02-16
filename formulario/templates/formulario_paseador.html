@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="body_form">
-        <form action="" class="formulario">
+        <form action="" class="formulario" enctype ="multipart/form-data">{% csrf_token %}
             <div class="titulo">
                     <h1>Datos del paseador</h1>
                 </div>
@@ -21,27 +21,21 @@
             <div class="row">
                 {{ form.direccion }}
                 {{ form.distrito }}
-                <input type="text" placeholder="Dirección">
-                <input type="text" placeholder="Distrito">
             </div>
             <div class="row">
                 {{ form.telefono }}
                 {{ form.dni }}
-                <input type="text" placeholder="Telefono">
-                <input type="text" placeholder="DNI">
             </div>
             <div class="row">
-                {{ form.Experiencia }}
-                {{ form.Edad }}
-                <input type="text" placeholder="Experiencia">
-                <input type="text" placeholder="Edad">
+                {{ form.experiencia }}
+                {{ form.edad }}
             </div>
             <div class="row_foto">
                 <p>¿ Podemos verte ?</p>
                 {{ form.foto }}
             </div>
             <div class="row">
-                <button>Enviar</button>
+                <button type="submit">Enviar</button>
                 <button type="reset">Limpiar</button>
             </div>
         </div>
