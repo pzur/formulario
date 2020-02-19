@@ -9,11 +9,15 @@ class Cliente(models.Model):
     telefono = models.CharField(max_length=15)
     direccion = models.CharField(max_length=15)
     distrito =models.CharField(max_length=200)
-    foto = models.ImageField(upload_to='img/clientes')
+    #foto = models.ImageField(upload_to='img/clientes')
     fecharegistro=models.DateTimeField()
     complete = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)
 
+    def __str__(self):
+        return self.nombre, self.apellido, self.dni, self.telefono, self.direccion, self.distrito
+
+   
 
 class Mascota(models.Model):
     nombre = models.CharField(max_length=200)
@@ -26,6 +30,9 @@ class Mascota(models.Model):
     fecharegistro=models.DateTimeField()
     complete = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.nombre, self.tipo, self.dni, self.telefono, self.direccion, self.distrito
 
 
 class Paseador(models.Model):

@@ -10,9 +10,11 @@ class ClienteForm(forms.ModelForm):
     direccion = forms.CharField(widget=forms.TextInput(attrs={'placeholder':'Direccion'}))
     distrito = forms.CharField(widget=forms.TextInput(attrs={'placeholder':'Distrito'}))
     foto = forms.CharField(widget=forms.FileInput(attrs={'placeholder':'Foto'}))
+    
+    
    
     
-    class Meta:
+    class Meta: 
         model = Cliente
         fields = '__all__'
 
